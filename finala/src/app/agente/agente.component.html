@@ -1,0 +1,21 @@
+
+<div class="parent">
+    <mat-form-field appearence="fill">
+        <mat-label>Agente</mat-label>
+        <select matNativeControl (change)="peticionCharact()"[(ngModel)]="selectedLevel">
+            <option *ngFor="let agente of agentes" [value]="agente">{{agente}}</option>
+        </select>
+        </mat-form-field>
+</div>
+
+<div *ngFor="let link of links">
+    <youtube-player
+    videoId={{this.link}}
+    suggestedQuality="highres"
+      [height]="250"
+      [width]="500"
+      [startSeconds]="4"
+      [showBeforeIframeApiLoads]="true"
+      [endSeconds]="300">
+      </youtube-player>
+    </div>

@@ -1,0 +1,46 @@
+
+    <h1>
+        <div>
+
+            <h1>Elige tu estado</h1><br>
+
+            <select type="number" (change)="peticion()" [(ngModel)]="selectedLevel">
+                <option *ngFor="let level of levels" [ngValue]="level">{{level.est}}</option>
+            </select>
+
+        </div>
+    </h1>
+    <ul>
+        <div *ngFor="let element of inegi3">
+            <li *ngIf="element.cvegeo===selectedLevel.name">
+
+                
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Abreviacion</th>
+                                <th scope="col">Poblacion</th>
+                                <th scope="col">Poblacion Femenina</th>
+                                <th scope="col">Poblacion Masculina</th>
+                                <th scope="col">Viviendas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"></th>
+                                <td>{{element.nom_agee}}</td>
+                                <td>{{element.nom_abrev}}</td>
+                                <td>{{element.pob}}</td>
+                                <td>{{element.pob_fem}}</td>
+                                <td>{{element.pob_mas}}</td>
+                                <td>{{element.viv}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+
+            </li>
+        </div>
+    </ul>

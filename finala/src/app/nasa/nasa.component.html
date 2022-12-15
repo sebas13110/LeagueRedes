@@ -1,0 +1,18 @@
+<div>
+<h1>Elige una fecha</h1>
+<br>
+<br>
+<input type="date" id="start" name="dt" (change)="tenerdatos()"
+       value="2018-07-22"
+       min="2010-01-01" max="2025-12-31" [ngModel] = "today | date:'yyyy-MM-dd'" (ngModelChange)="today=$event"> <br> <p>{{today}}</p>
+       <div>Fecha {{variable1}}<br>
+            Titulo {{variable3}}<br>
+            Explicacion {{variable2}}<br>
+       </div>
+       <br>
+       <div id="square" class="center">
+       <img class="img-fluid" src="{{variable}}">
+        </div>
+    
+
+    </div>
